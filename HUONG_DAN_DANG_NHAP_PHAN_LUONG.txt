@@ -1,0 +1,36 @@
+BẢN ĐÃ SỬA ĐĂNG NHẬP / PHÂN LUỒNG
+
+1. Mở file:
+   BikeShareWebApp.sln
+   hoặc BikeShareWebApp.csproj
+
+2. Kiểm tra appsettings.json:
+   Nếu SQL Server của bạn là dvtdu\SPARTA thì giữ nguyên.
+   Nếu khác, sửa lại ConnectionStrings:BikeShareDb cho đúng tên SQL Server.
+
+3. Chạy project:
+   Ctrl + F5
+   URL: http://localhost:5179
+
+4. Tài khoản demo:
+   Khách hàng:
+   Email: an@gmail.com
+   Mật khẩu: 123456
+   => Đăng nhập xong chuyển về Trang chủ.
+
+   Admin:
+   Email: admin@bikeshare.vn
+   Mật khẩu: admin123
+   => Đăng nhập xong chuyển vào Dashboard Admin.
+
+5. Nếu database của bạn đã tạo từ file SQL cũ và vẫn còn mật khẩu *_HASH_DEMO:
+   Vào SQL Server Management Studio, chạy file:
+   Database/Update_Demo_Login.sql
+
+6. Kiểm tra đăng ký:
+   Vào /Account/Register
+   Đăng ký tài khoản mới.
+   Sau đó vào SQL chạy:
+   SELECT * FROM Users ORDER BY UserId DESC;
+   SELECT * FROM CustomerProfiles ORDER BY CustomerId DESC;
+   SELECT * FROM Wallets ORDER BY WalletId DESC;

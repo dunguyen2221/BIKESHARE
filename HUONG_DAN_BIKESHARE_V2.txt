@@ -1,0 +1,54 @@
+BẢN V2 - ĐÃ BỔ SUNG NGHIỆP VỤ CHÍNH
+
+Các chức năng đã có:
+1. Đăng ký lưu SQL.
+2. Đăng nhập, đăng xuất, Session.
+3. Phân luồng:
+   - Customer đăng nhập xong về Trang chủ.
+   - Admin đăng nhập xong vào Dashboard.
+4. Customer:
+   - Xem danh sách xe.
+   - Xem chi tiết xe.
+   - Đặt giữ xe 15 phút.
+   - Thuê xe bằng nút Thuê hoặc nhập mã QR/mã xe.
+   - Tạo Trip mới vào SQL.
+   - Cập nhật xe sang Rented.
+   - Xem chuyến đi hiện tại.
+   - Khóa tạm thời / mở khóa tiếp tục.
+   - Trả xe tại trạm.
+   - Tính phí theo bảng PricingRules.
+   - Trừ tiền ví.
+   - Tạo Payment, WalletTransaction, Invoice.
+   - Xem lịch sử chuyến đi.
+   - Đánh giá chuyến đi.
+   - Báo hỏng xe.
+5. Wallet:
+   - Xem số dư ví.
+   - Nạp ví demo.
+   - Xem lịch sử giao dịch ví.
+6. Admin:
+   - Dashboard.
+   - Quản lý xe: thêm, sửa, đổi trạng thái.
+   - Quản lý trạm: thêm, sửa.
+   - Quản lý user: xem, khóa/mở khóa.
+   - Xem chuyến đi toàn hệ thống.
+   - Xem và xử lý báo hỏng/sự cố.
+
+Tài khoản test:
+- Customer: an@gmail.com / 123456
+- Admin: admin@bikeshare.vn / admin123
+
+Nếu database cũ còn mật khẩu dạng *_HASH_DEMO:
+Chạy file Database/Update_Demo_Login.sql trong SQL Server Management Studio.
+
+Luồng test nhanh:
+1. Đăng nhập customer: an@gmail.com / 123456
+2. Vào Tìm xe
+3. Bấm Thuê xe BS-001 hoặc nhập QR-BS-001
+4. Vào Chuyến đi
+5. Chọn trạm trả xe
+6. Bấm Trả xe và thanh toán
+7. Xem Lịch sử hoặc Ví
+8. Đăng xuất
+9. Đăng nhập admin: admin@bikeshare.vn / admin123
+10. Vào Dashboard Admin để xem xe, trạm, user, chuyến đi, sự cố.
